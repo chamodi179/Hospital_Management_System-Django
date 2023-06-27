@@ -1,0 +1,31 @@
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #B0B4E8;
+
+    /* new additions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0
+}
+.site-footer ul li a {
+    color: #5c5c5c;
+}
+.site-footer ul li a:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+.footer-end a{
+    color: #5c5c5c !important;
+    text-decoration: none;
+}
+.fab{
+    color: #5c5c5c !important;
+}
+.fab:hover{
+    color: #fffcfc !important;
+    text-decoration: none;
+}

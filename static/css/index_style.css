@@ -1,0 +1,14 @@
+/* .vision-section {
+    background-image: url("{% static 'images/banner.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2rem;
+    height: 5rem;
+}
+
+.vision-heading,
+.vision-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+} */

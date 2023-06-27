@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="navbar-wrapper">
+            {% include 'navbar.html' %}
+        </div>
+
+        <div class="sit-body container-fluid mt-0">
+            <!-- banner -->
+            <div class="jumbotron banner w-100 "
+                style="background-image: url('{% static 'images/banner.png' %}'); height: 400px;">
+                <div class="container center-content mt-7">
+                    <h1 class="mt-5 text-center">Welcome to our website</h1>
+                    <p class="mt-5 text-center">Explore our services and discover more</p>
+                    <a href="#" class="btn btn-primary btn-lg mt-8 btn-no-outline d-block mx-auto"
+                        style="background-color: rgba(41, 127, 185, 0.705); font-size: 22px; padding: 15px 30px; border: none; width: fit-content;">Get
+                        Started</a>
+                </div>
+            </div>
+
+            <!-- vision, mission, about us -->
+            <div class="container">
+                <div class="row" style="height: 40rem; width:auto;">
+                    <div class="col-md-4 vision vision-section"
+                        style="background-image: url('{% static 'images/vision.png' %}'); background-repeat: no-repeat; background-size: 40rem 40rem; background-position: center;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <h2 class="vision-heading ">Vision</h2>
+                            <p class="vision-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                                consectetur bibendum nisi, a lacinia ipsum fermentum id.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 vision vision-section"
+                        style="background-image: url('{% static 'images/about_us.png' %}'); background-repeat: no-repeat; background-size: 40rem 40rem; background-position: center;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <h2 class="vision-heading ">About Us</h2>
+                            <p class="vision-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                                consectetur bibendum nisi, a lacinia ipsum fermentum id.Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Nullam
+                                consectetur bibendum nisi, a lacinia ipsum fermentum id.Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Nullam
+                                consectetur bibendum nisi, a lacinia ipsum fermentum id.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 vision vision-section"
+                        style="background-image: url('{% static 'images/mission.png' %}'); background-repeat: no-repeat; background-size: 40rem 40rem; background-position: center;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <h2 class="vision-heading ">Mission</h2>
+                            <p class="vision-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                                consectetur bibendum nisi, a lacinia ipsum fermentum id.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+        </div>
+
+        </div>
+
+        {% comment %} footer {% endcomment %}
+        <div class="footer-wrapper mt-5">
+            {% include 'footer.html' %}
+        </div>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>

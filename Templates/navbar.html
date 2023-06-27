@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar_styles.css' %}">
+    <title>Navbar Example</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <img src="{% static 'images/logo.png' %}" alt="Navbar Logo" id="logo">
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link me-5 " href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5" href="">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5" href="">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-5" href="">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user_signup/" class="btn btn-transparent btn-lg" style="background-color: rgba(41, 127, 185, 0.24); color: black;">
+                            <i class="fa fa-user"></i> Signup
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Add your page content here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
