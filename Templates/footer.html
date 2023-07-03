@@ -7,8 +7,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style_footer.css' %}">
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/style_footer.css' %}"> {% endcomment %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .site-footer ul li a {
+            color: #5c5c5c;
+        }
+        .site-footer ul li a:hover {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+        .footer-end a{
+            color: #5c5c5c !important;
+            text-decoration: none;
+        }
+        .fab{
+            color: #5c5c5c !important;
+        }
+        .fab:hover{
+            color: #fffcfc !important;
+            text-decoration: none;
+        }
+        .site-footer {
+            background-color: #B0B4E8; */
+
+            /* new additions */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0
+        }
+    </style>
 <title>Footer</title>
 </head>
 

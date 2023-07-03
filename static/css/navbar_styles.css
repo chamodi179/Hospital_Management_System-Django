@@ -14,8 +14,9 @@
 .navbar-nav .nav-link:focus {
   color: #ffffff !important;
   text-decoration: none;
-  /* font-weight: bold; */
+
 }
+
 #logo {
   width: 8rem !important;
   height: 7rem !important;
@@ -24,4 +25,8 @@
   pointer-events: none;
   color: #5c5c5c;
   /* Additional styles to visually indicate disabled state */
+}
+.active{
+  color: #ffffff !important;
+  text-decoration: none;
 }

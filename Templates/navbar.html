@@ -18,16 +18,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link me-5 " href="">Home</a>
+                        <a class="nav-link me-5 {% if navbar == 'index' %} active {% endif %}" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-5" href="">About</a>
+                        <a class="nav-link me-5 {% if navbar == 'About' %} active {% endif %}" href="{% url 'About' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-5" href="">Contact</a>
+                        <a class="nav-link me-5 {% if navbar == 'Contact' %} active {% endif %}" href="{% url 'Contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-5" href="">Services</a>
+                        <a class="nav-link me-5 {% if navbar == 'Services' %} active {% endif %}" href="{% url 'Services' %}">Services</a>
                     </li>
                     <li class="nav-item">
                         <a href="user_signup/" class="btn btn-transparent btn-lg" style="background-color: rgba(41, 127, 185, 0.24); color: black;">
