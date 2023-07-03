@@ -1,23 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .link-item {
+            color: black;
+        }
+
+        .link-item:hover {
+            color: black;
+            text-decoration: none;
+            background-color: rgba(41, 127, 185, 0.24);
+        }
+
+        .hide {
+            display: none;
+            /*max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;*/
+        }
+
+        #center-list,
+        #center-list-2 {
+            list-style: none;
+            /* Remove list decoration */
+            padding-left: 0;
+            /* Remove default left padding */
+        }
+
+        body {
+            overflow-x: hidden;
+            /*overflow-y: hidden;*/
+        }
+    </style>
 </head>
+
 <body>
     <!-- navbar -->
     <div class="navbar-wrapper">
         {% include 'navbar.html' %}
     </div>
     <!-- site body -->
-    <div>
-
+    <div class="site-body">
+        <div class="row">
+            <!-- 1st col -->
+            <div class="col-md-3">
+                <table border="2" style="width: 21%; height:auto; margin-left: 2rem;">
+                    <tr>
+                        <td>
+                            <h5 class="btn btn-transparent w-100 mt-0 mb-1"
+                                style="background-color: #b0b4e87a; font-weight:bold;"> CENTERS OF EXCELLENCE &nbsp;<i
+                                    class="fas fa-minus" id="toggle-icon"></i>
+                            </h5>
+                            <ul type="none" id="center-list">
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">COSMETIC CENTRE&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">BLOOD CANCER CENTRE&nbsp;
+                                    </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">GASTROENTEROLOGY&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">HEALTH CHECK&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">KIDNEY CARE CENTRE&nbsp;
+                                    </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">FERTILITY CENTRE&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">HEART CENTRE&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">WOMEN'S WELLNESS
+                                        CENTRE&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">UROLOGY CARE CENTRE&nbsp;
+                                    </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">MENS WELLNESS CENTRE&nbsp;
+                                    </a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                            <h5 class="btn btn-transparent w-100 mt-0 mb-1"
+                                style="background-color: #b0b4e87a; font-weight:bold;">GENERAL SERVICES&nbsp;<i
+                                    class="fas fa-minus" id="toggle-icon-2"></i>
+                            </h5>
+                            <ul type="none" id="center-list-2">
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">OUTPATIENT DEPARTMENT
+                                        (OPD)&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">GENERAL MEDICINE&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">NEUROLOGY CENTRE&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">VACCINATIONS&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">PHYSIOTHERAPY&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">DERMATOLOGY&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">BLOOD BANK&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">SENTAL CLINIC&nbsp; </a>
+                                </li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">ENT CENTRE&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">MOTHER AND BABY CARE
+                                        CENTRE&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">EYE CLINIC&nbsp; </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">RADIOLOGY SERVICES&nbsp;
+                                    </a></li>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">EMERGENCY SERVICES&nbsp;
+                                    </a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 2nd col -->
+            <div class="col-md-9">
+                <div class="container-fluid">
+                    <h3> MEDICAL & SURGICAL SERVICES </h3>
+                    <p class="text-left me-3 fs-3">Lanka Hospitals has revolutionized the Sri Lankan healthcare industry. For
+                        over a decade we have
+                        played a critical role in the nation’s strategy to provide world-class medical care whilst
+                        balancing the equation of affordability and accessibility for all Sri Lankans. For us service
+                        excellence is dynamic, which is why we constantly seek to enhance our service delivery in a bid
+                        to provide our customers with world-care healthcare experiences.</p>
+                    <p class="text-left me-3 fs-3">
+                    At Lanka Hospitals, we provide both clinical and non-clinical care, always striving for
+                    excellence through a meticulous drive for quality and continuous improvement. We provide 280-bed
+                    multi-speciality tertiary care medical services located in seven acres of beautifully landscaped
+                    garden. Lanka Hospitals provides state of the art features that are complemented by cutting edge
+                    technology and is staffed by a well-experienced and trained team. We provide a complete range of
+                    the latest diagnostic and high-end medical technology.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- footer -->
     <div class="footer-wrapper mt-5">
         {% include 'footer.html' %}
     </div>
+
+    <script>
+        const toggleIcon = document.getElementById('toggle-icon');
+        const centerList = document.getElementById('center-list');
+
+        toggleIcon.addEventListener('click', function () {
+            if (centerList.classList.contains('hide')) {
+                centerList.classList.remove('hide');
+                toggleIcon.classList.remove('fa-plus');
+                toggleIcon.classList.add('fa-minus');
+            } else {
+                centerList.classList.add('hide');
+                toggleIcon.classList.remove('fa-minus');
+                toggleIcon.classList.add('fa-plus');
+            }
+        });
+
+        const toggleIcon_2 = document.getElementById('toggle-icon-2');
+        const centerList_2 = document.getElementById('center-list-2');
+
+        toggleIcon_2.addEventListener('click', function () {
+            if (centerList_2.classList.contains('hide')) {
+                centerList_2.classList.remove('hide');
+                toggleIcon_2.classList.remove('fa-plus');
+                toggleIcon_2.classList.add('fa-minus');
+            } else {
+                centerList_2.classList.add('hide');
+                toggleIcon_2.classList.remove('fa-minus');
+                toggleIcon_2.classList.add('fa-plus');
+            }
+        });
+    </script>
 </body>
+
 </html>
