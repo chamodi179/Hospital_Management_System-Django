@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,25 +59,26 @@
                                     class="fas fa-minus" id="toggle-icon"></i>
                             </h5>
                             <ul type="none" id="center-list">
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">COSMETIC CENTRE&nbsp; </a>
+                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent"
+                                        onclick="showContent('COSMETIC_CENTRE')">COSMETIC CENTRE&nbsp; </a>
                                 </li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">BLOOD CANCER CENTRE&nbsp;
+                                <li>&nbsp;<a href="#" onclick="showContent('BC_CENTRE')" class="link-item btn btn-transparent">BLOOD CANCER CENTRE&nbsp;
                                     </a></li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">GASTROENTEROLOGY&nbsp; </a>
+                                <li>&nbsp;<a href="#" onclick="showContent('GASTROENTEROLOGY')" class="link-item btn btn-transparent">GASTROENTEROLOGY&nbsp; </a>
                                 </li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">HEALTH CHECK&nbsp; </a>
+                                <li>&nbsp;<a href="#" onclick="showContent('HEALTH_CHECK')" class="link-item btn btn-transparent">HEALTH CHECK&nbsp; </a>
                                 </li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">KIDNEY CARE CENTRE&nbsp;
+                                <li>&nbsp;<a href="#" onclick="showContent('KIDNE_CARE_C')" class="link-item btn btn-transparent">KIDNEY CARE CENTRE&nbsp;
                                     </a></li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">FERTILITY CENTRE&nbsp; </a>
+                                <li>&nbsp;<a href="#" onclick="showContent('FERTILITY_CENTRE')" class="link-item btn btn-transparent">FERTILITY CENTRE&nbsp; </a>
                                 </li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">HEART CENTRE&nbsp; </a>
+                                <li>&nbsp;<a href="#" onclick="showContent('HEART_CENTRE')" class="link-item btn btn-transparent">HEART CENTRE&nbsp; </a>
                                 </li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">WOMEN'S WELLNESS
+                                <li>&nbsp;<a href="#" onclick="showContent('W_WELLNESS')" class="link-item btn btn-transparent">WOMEN'S WELLNESS
                                         CENTRE&nbsp; </a></li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">UROLOGY CARE CENTRE&nbsp;
+                                <li>&nbsp;<a href="#" onclick="showContent('UROLOGY_CARE_C')" class="link-item btn btn-transparent">UROLOGY CARE CENTRE&nbsp;
                                     </a></li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">MENS WELLNESS CENTRE&nbsp;
+                                <li>&nbsp;<a href="#" onclick="showContent('MENS_WELLNESS_C')" class="link-item btn btn-transparent">MENS WELLNESS CENTRE&nbsp;
                                     </a></li>
                             </ul>
                         </td>
@@ -102,8 +105,6 @@
                                 <li>&nbsp;<a href="#" class="link-item btn btn-transparent">SENTAL CLINIC&nbsp; </a>
                                 </li>
                                 <li>&nbsp;<a href="#" class="link-item btn btn-transparent">ENT CENTRE&nbsp; </a></li>
-                                <li>&nbsp;<a href="#" class="link-item btn btn-transparent">MOTHER AND BABY CARE
-                                        CENTRE&nbsp; </a></li>
                                 <li>&nbsp;<a href="#" class="link-item btn btn-transparent">EYE CLINIC&nbsp; </a></li>
                                 <li>&nbsp;<a href="#" class="link-item btn btn-transparent">RADIOLOGY SERVICES&nbsp;
                                     </a></li>
@@ -116,25 +117,85 @@
             </div>
             <!-- 2nd col -->
             <div class="col-md-9">
-                <div class="container-fluid">
-                    <h3> MEDICAL & SURGICAL SERVICES </h3>
-                    <p class="text-left me-3 fs-3">Lanka Hospitals has revolutionized the Sri Lankan healthcare industry. For
-                        over a decade we have
-                        played a critical role in the nation’s strategy to provide world-class medical care whilst
-                        balancing the equation of affordability and accessibility for all Sri Lankans. For us service
-                        excellence is dynamic, which is why we constantly seek to enhance our service delivery in a bid
-                        to provide our customers with world-care healthcare experiences.</p>
-                    <p class="text-left me-3 fs-3">
-                    At Lanka Hospitals, we provide both clinical and non-clinical care, always striving for
-                    excellence through a meticulous drive for quality and continuous improvement. We provide 280-bed
-                    multi-speciality tertiary care medical services located in seven acres of beautifully landscaped
-                    garden. Lanka Hospitals provides state of the art features that are complemented by cutting edge
-                    technology and is staffed by a well-experienced and trained team. We provide a complete range of
-                    the latest diagnostic and high-end medical technology.
-                    </p>
+                <div id="dynamic-content">
+                    <div class="container-fluid">
+                        <h3> MEDICAL & SURGICAL SERVICES </h3>
+                        <p class="text-left me-3 fs-3">Lanka Hospitals has revolutionized the Sri Lankan healthcare
+                            industry. For
+                            over a decade we have
+                            played a critical role in the nation’s strategy to provide world-class medical care whilst
+                            balancing the equation of affordability and accessibility for all Sri Lankans. For us
+                            service
+                            excellence is dynamic, which is why we constantly seek to enhance our service delivery in a
+                            bid
+                            to provide our customers with world-care healthcare experiences.</p>
+                        <p class="text-left me-3 fs-3">
+                            At Lanka Hospitals, we provide both clinical and non-clinical care, always striving for
+                            excellence through a meticulous drive for quality and continuous improvement. We provide
+                            280-bed
+                            multi-speciality tertiary care medical services located in seven acres of beautifully
+                            landscaped
+                            garden. Lanka Hospitals provides state of the art features that are complemented by cutting
+                            edge
+                            technology and is staffed by a well-experienced and trained team. We provide a complete
+                            range of
+                            the latest diagnostic and high-end medical technology.
+                        </p>
+                    </div>
+                    <div class="container ms-5">
+                        <img src="{% static 'images/hospital_banner-2.jpg' %}" alt="">
+                    </div>
+                    <div class="container-fluid mt-5 me-5">
+                        <h3>CENTRES OF EXCELLENCE</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="{% static 'images/UROLOGY.jpg' %}" alt="" style="height:20rem; width:20rem">
+                                <h4>UROLOGY CARE CENTRE</h4>
+                                <p>The Urology Care Centre is the first dedicated one-stop centre for urology in Sri
+                                    Lanka.
+                                    The main advantage of this centre is that patients can be assessed and can undergo a
+                                    range of investigations during a single visit.</p>
+                                <a href="">EXPLORE</a>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'images/BLOOD_CANCER.jpg' %}" alt=""
+                                    style="height:20rem; width:20rem">
+                                <h4>BLOOD CANCER CENTRE</h4>
+                                <p>We have a dedicated and fully equipped facility for all blood related cancer
+                                    treatments,
+                                    the only such treatment facility in Sri Lanka</p>
+                                <a href="">EXPLORE</a>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'images/EMERGENCY_SERVICES.jpg' %}" alt=""
+                                    style="height:20rem; width:20rem">
+                                <h4>EMERGENCY SERVICES</h4>
+                                <p>On call 24 hours a day, 7 days a week, Lanka Hospitals is possibly Sri Lanka’s best
+                                    choice for treatment in a medical emergency, as we offer minimal waiting times and a
+                                    dedicated unit of experienced doctors of all specialities of medicine</p>
+                                <a href="">EXPLORE</a>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="{% static 'images/eye-clinic.jpg' %}" alt=""
+                                    style="height:20rem; width:20rem">
+                                <h4>EYE CLINIC</h4>
+                                <p>We are the only private eye clinic in Sri Lanka to offer a complete range of services
+                                    in one central location, led by local and foreign consultant ophthalmologists with
+                                    highly
+                                    trained nurses</p>
+                                <a href="">EXPLORE</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- go to the top button -->
+    <div class="container-fluid text-end mb-0 mt-3">
+        <a href="#" class="btn btn-primary btn-lg" id="scrollToTop">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </div>
 
     <!-- footer -->
@@ -172,6 +233,116 @@
                 toggleIcon_2.classList.add('fa-plus');
             }
         });
+
+
+        /*dynamic content*/
+        function showContent(value) {
+            if (value === "COSMETIC_CENTRE") {
+                fetch('/services/cosmetic/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+            else if(value === "BC_CENTRE"){
+                fetch('/services/BC_CENTRE/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "GASTROENTEROLOGY"){
+                fetch('/services/GASTROENTEROLOGY/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "HEALTH_CHECK"){
+                fetch('/services/HEALTH_CHECK/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "KIDNE_CARE_C"){
+                fetch('/services/KIDNE_CARE_C/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "FERTILITY_CENTRE"){
+                fetch('/services/FERTILITY_CENTRE/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "HEART_CENTRE"){
+                fetch('/services/HEART_CENTRE/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "W_WELLNESS"){
+                fetch('/services/W_WELLNESS/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "UROLOGY_CARE_C"){
+                fetch('/services/UROLOGY_CARE_C/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }else if(value === "MENS_WELLNESS_C"){
+                fetch('/services/MENS_WELLNESS_C/')
+                    .then(response => response.text())
+                    .then(data => {
+                        const dynamicContent = document.getElementById('dynamic-content');
+                        dynamicContent.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            } else{
+                window.location.reload();
+            }
+        }
+
     </script>
 </body>
 

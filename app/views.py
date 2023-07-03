@@ -16,3 +16,34 @@ def Contact(request):
 def Services(request):
     return render(request, "Services.html", {'navbar': 'Services'})
 
+def cosmetic_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'cosmetic'})
+
+def BC_CENTRE_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'BC_CENTRE'})
+
+def GASTROENTEROLOGY_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'GASTROENTEROLOGY'})
+
+def HEALTH_CHECK_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'HEALTH_CHECK'})
+
+def KIDNE_CARE_C_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'KIDNE_CARE_C'})
+
+def FERTILITY_CENTRE_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'FERTILITY_CENTRE'})
+
+def HEART_CENTRE_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'HEART_CENTRE'})
+
+def W_WELLNESS_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'W_WELLNESS'})
+
+def UROLOGY_CARE_C_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'UROLOGY_CARE_C'})
+
+def MENS_WELLNESS_C_view(request):
+    return render(request, 'services_template.html', {'selected_center': 'MENS_WELLNESS_C'})
+
+
