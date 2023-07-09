@@ -1,5 +1,6 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect
-
+from django.urls import reverse
 # Create your views here.
 def index(request):
     return render(request, 'index.html', {'navbar': 'index'})
@@ -46,4 +47,10 @@ def UROLOGY_CARE_C_view(request):
 def MENS_WELLNESS_C_view(request):
     return render(request, 'services_template.html', {'selected_center': 'MENS_WELLNESS_C'})
 
+def go_back(request):
+    previous_url = request.META.get('HTTP_REFERER')
+    if previous_url is None:
+        return redirect('index')
+    else:
+        return redirect(previous_url)
 
