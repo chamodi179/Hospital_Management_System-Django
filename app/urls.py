@@ -17,5 +17,5 @@ urlpatterns = [
     path('services/W_WELLNESS/', views.W_WELLNESS_view, name='W_WELLNESS'),
     path('services/UROLOGY_CARE_C/', views.UROLOGY_CARE_C_view, name='UROLOGY_CARE_C'), 
     path('services/MENS_WELLNESS_C/', views.MENS_WELLNESS_C_view, name='MENS_WELLNESS_C'),
-    path('go_back/', views.go_back, name='go_back'),
+    path('signup/', views.signup, name='signup'),
 ]

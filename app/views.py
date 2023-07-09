@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect
-from django.urls import reverse
+from .models import HMS_User
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html', {'navbar': 'index'})
@@ -47,10 +48,20 @@ def UROLOGY_CARE_C_view(request):
 def MENS_WELLNESS_C_view(request):
     return render(request, 'services_template.html', {'selected_center': 'MENS_WELLNESS_C'})
 
-def go_back(request):
-    previous_url = request.META.get('HTTP_REFERER')
-    if previous_url is None:
-        return redirect('index')
-    else:
-        return redirect(previous_url)
+def signup(request):
+    if request.method == 'POST':
+        last_name = request.POST['last_name']
+        first_name = request.POST['first_name']
+        address = request.POST['address']
+        email = request.POST['email']
+        contact = request.POST['contact']
+        age = request.POST['age']
+        password = request.POST['password']
 
+        user = HMS_User(last_name=last_name, first_name=first_name, address=address, email=email, contact=contact, age=age, password=password)
+        user.save()
+
+        return redirect('index')  # Redirect to a success page or another URL
+        # return render(request, 'index.html')
+
+    return render(request, 'index.html')

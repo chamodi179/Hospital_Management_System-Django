@@ -130,15 +130,15 @@
       </div>
       <div class="col2 col-md-6 ">
         <h5 class="p-3" id="heading">Create your Account</h5>
-        <form method="POST">
+        <form method="POST" action="{% url 'signup' %}">
           {% csrf_token %}
-          <input type="text" class="form-control mt-2" placeholder="Last name" aria-label="Last name">
-          <input type="text" class="form-control mt-2" placeholder="First name" aria-label="First name">
-          <input type="text" class="form-control mt-2" placeholder="Address" aria-label="Address">
-          <input type="text" class="form-control mt-2" placeholder="Email" aria-label="Email">
-          <input type="text" class="form-control mt-2" placeholder="Contact" aria-label="Contact">
-          <input type="number" class="form-control mt-2" placeholder="Age" aria-label="Age">
-          <input type="password" class="form-control mt-2" placeholder="Password" aria-label="Password">
+          <input name="first_name" type="text" class="form-control mt-2" placeholder="First name" aria-label="First name">
+          <input name="last_name" type="text" class="form-control mt-2" placeholder="Last name" aria-label="Last name">
+          <input name="address" type="text" class="form-control mt-2" placeholder="Address" aria-label="Address">
+          <input name="email" type="text" class="form-control mt-2" placeholder="Email" aria-label="Email">
+          <input name="contact" type="text" class="form-control mt-2" placeholder="Contact" aria-label="Contact">
+          <input name="age" type="number" class="form-control mt-2" placeholder="Age" aria-label="Age">
+          <input name="password" type="password" class="form-control mt-2" placeholder="Password" aria-label="Password">
           <div class="col-12 mt-3">
             <button type="submit" class="btn btn-primary w-75 shadow mt-5" style="border-radius:50px;">
               <i class="fas fa-user-plus"></i> Sign Up
@@ -146,13 +146,18 @@
           </div>
 
           <div id="login" class="d-flex justify-content-around mt-3">
-            <a href="{% url 'go_back' %}"><i class="fas fa-angle-left"></i>&nbsp;Back</a>
+            <a href="javascript:goBack()"><i class="fas fa-angle-left"></i>&nbsp;Back</a>
             <a href="#"><i class="fas fa-sign-in-alt"></i>&nbsp;Login</a>
           </div>
         </form>
       </div>
     </div>
   </div>
+  <script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
